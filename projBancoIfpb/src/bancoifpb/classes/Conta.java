@@ -92,8 +92,13 @@ public class Conta {
 	}
 
 
-	public void setNumCNPJ(String numCNPJ) {
-		this.numCNPJ = numCNPJ;
+	public Boolean setNumCNPJ(String numCNPJ) {
+		if (numCNPJ!= null && numCNPJ.length()<19) {
+			this.numCNPJ = numCNPJ;
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 
