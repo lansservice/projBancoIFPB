@@ -4,9 +4,12 @@
 package bancoifpb.classes;
 
 /**
- * @author Administrador
- *
+ * @author Leonardo Costa Vieira
+ * @author Alessandro
+ * 
+ * Classe destinada a Contas Poupança
  */
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends ContaPessoaFisica{
 
+	
 }

@@ -8,6 +8,8 @@ package bancoifpb.classes;
 /**
  * @author Leonardo Costa Vieira
  * @author Alessandro
+ * Inicialmente forao declaradas inumeras variaveis do tipo String mesmo que elas recebam somente numeros,
+ * para que assim possamos validar os valores e tratarmos melhor todos entidades.
  *
  */
 
@@ -21,12 +23,6 @@ public class Conta {
 	/** * Numero do Digito Verificador da  conta bancaria, aceitando somente valores inteiros. Tamanho do campo 01 digito. */
 	private String numDigitoVerificador;
 
-	/**	 * Armazena o CPF do correntista em uma string com 14 digitos.	 */
-	private String numCPF;
-	
-	/**  * Armazena o CNPJ do correntista em uma string com  digitos. */
-	private String numCNPJ;
-
 	/** * Armazena o saldo da conta em um valor numero com operaçoes precisas */
 	private BigDecimal valorSaldo;
 	
@@ -35,8 +31,6 @@ public class Conta {
 		this.numConta = "00000";
 		this.numDigitoVerificador = "0";
 		this.numConta = "0000";
-		this.numCPF = "000.000.000-00";
-		this.numCNPJ = "00.000.000/0000-00";
 		this.valorSaldo = valorSaldo.add(null);
 	}
 
@@ -65,36 +59,6 @@ public class Conta {
 	public Boolean setNumDigitoVerificador(String numDigitoVerificador) {
 		if (numDigitoVerificador != null && numDigitoVerificador.length()<10) {
 			this.numDigitoVerificador = numDigitoVerificador;
-			return true;
-		}else {
-			return false;
-		}
-	}
-
-
-	public String getNumCPF() {
-		return numCPF;
-	}
-
-
-	public Boolean setNumCPF(String numCPF) {
-		if (numCPF!= null && numCPF.length()<15) {
-			this.numCPF = numCPF;
-			return true;	
-		}else {
-			return false;
-		}
-	}
-
-
-	public String getNumCNPJ() {
-		return numCNPJ;
-	}
-
-
-	public Boolean setNumCNPJ(String numCNPJ) {
-		if (numCNPJ!= null && numCNPJ.length()<19) {
-			this.numCNPJ = numCNPJ;
 			return true;
 		}else {
 			return false;
