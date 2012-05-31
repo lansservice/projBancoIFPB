@@ -9,6 +9,7 @@ package bancoifpb.classes;
  * 
  * Classe destinada a Contas Poupança
  */
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends ContaPessoaFisica{
 
+	
 }
