@@ -1,7 +1,7 @@
 /**
  * 
  */
-package bancoifpb.classes;
+package bancoifpb.classes.conta;
 
 /**
  * @author Leonardo Costa Vieira

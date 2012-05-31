@@ -5,6 +5,8 @@ package bancoifpb.classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import bancoifpb.classes.cliente.*;
+import bancoifpb.classes.conta.*;
 
 /**
  * @author Leonardo Costa Vieira

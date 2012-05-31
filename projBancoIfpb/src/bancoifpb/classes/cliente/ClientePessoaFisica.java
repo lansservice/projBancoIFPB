@@ -1,18 +1,18 @@
 /**
  * 
  */
-package bancoifpb.classes;
+package bancoifpb.classes.cliente;
 
 /**
  * @author Administrador
  *
  */
-public class ClientePessoaJuridica extends Cliente {
+public class ClientePessoaFisica extends Cliente{
 
 	/**
 	 * 
 	 */
-	public ClientePessoaJuridica() {
+	public ClientePessoaFisica() {
 		// TODO Auto-generated constructor stub
 	}
 

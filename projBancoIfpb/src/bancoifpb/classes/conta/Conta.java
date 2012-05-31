@@ -3,7 +3,7 @@
  */
 
 
-package bancoifpb.classes;
+package bancoifpb.classes.conta;
 
 /**
  * @author Leonardo Costa Vieira
@@ -40,6 +40,7 @@ public class Conta {
 	}
 
 
+	/** * Seta o numero de uma conta */
 	public Boolean setNumConta(String numConta) {
 		if (numConta!= null && numConta.length()<6) {
 			this.numConta = numConta;
@@ -56,6 +57,7 @@ public class Conta {
 	}
 
 
+	/** * Seta o numero do digito verificador de uma conta */
 	public Boolean setNumDigitoVerificador(String numDigitoVerificador) {
 		if (numDigitoVerificador != null && numDigitoVerificador.length()<10) {
 			this.numDigitoVerificador = numDigitoVerificador;
@@ -65,7 +67,7 @@ public class Conta {
 		}
 	}
 
-
+	/** * Busca o saldo de uma conta*/
 	public BigDecimal getValorSaldo() {
 		return valorSaldo;
 	}
@@ -74,10 +76,6 @@ public class Conta {
 	public void setValorSaldo(BigDecimal valorSaldo) {
 		this.valorSaldo = valorSaldo;
 	}
-
-	/**
-	 * 
-	 */
 
 	
 	
