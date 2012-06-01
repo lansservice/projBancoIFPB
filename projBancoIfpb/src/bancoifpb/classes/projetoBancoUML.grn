@@ -1,0 +1,25 @@
+<uml>
+   <greenVersion="30500"/>
+   <type>
+      <name="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="-108"/>
+      <y="339"/>
+   </type>
+   <type>
+      <name="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="-384"/>
+      <y="109"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+</uml>
+

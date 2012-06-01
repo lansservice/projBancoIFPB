@@ -5,23 +5,35 @@ package bancoifpb.classes.cliente;
 
 
 /**
- * @author Administrador
- *
+ * @author Leonardo Costa Vieira
+ * @author Alessandro
+ * Declaramos aqui tudo relativo a entidade Cliente.
  */
 public class Cliente {
 
-	/**
-	 * 
-	 */
+	/** *Nome do responsavel pela conta */
 	private String cliNome;
+	/** *Sobrenome do responsavel pela conta */
+	private String cliSobrenome;
+	/** *Endereço do Cliente */
+	private String cliEnd;
+	/** *Numero do endereço do cliente */
+	private String cliNum;
 	
 	
+	public Cliente() {
+	}
 	public String getCliNome() {
 		return cliNome;
 	}
 
-	public void setCliNome(String cliNome) {
-		this.cliNome = cliNome;
+	public Boolean setCliNome(String cliNome) {
+		if (cliNome != null) {
+			this.cliNome = cliNome;
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 	public String getCliSobrenome() {
@@ -48,11 +60,6 @@ public class Cliente {
 		this.cliNum = cliNum;
 	}
 
-	private String cliSobrenome;
-	private String cliEnd;
-	private String cliNum;
 	
-	public Cliente() {
-	}
 
 }

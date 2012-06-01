@@ -16,6 +16,8 @@ package bancoifpb.classes.conta;
 import java.math.BigDecimal;
 
 public class Conta {
+	/** * Valor fixo em percentagem para algumas movimentaçoes financeiras*/
+	final double IOF = 0.01;
 
 	/** * Numero da conta bancaria, aceitando somente valores inteiros. Tamanho do campo 05 digitos.*/
 	private String numConta;
@@ -30,7 +32,7 @@ public class Conta {
 	public Conta() {
 		this.numConta = "00000";
 		this.numDigitoVerificador = "0";
-		this.numConta = "0000";
+
 		this.valorSaldo = valorSaldo.add(null);
 	}
 

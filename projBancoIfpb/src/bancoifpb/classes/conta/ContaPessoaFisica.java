@@ -4,8 +4,9 @@
 package bancoifpb.classes.conta;
 
 /**
- * @author Administrador
- *
+ * @author Leonardo Costa Vieira
+ * @author Alessandro
+ * Declaramos aqui tudo relativo a entidade Conta Pessoa Fisica
  */
 public class ContaPessoaFisica extends Conta {
 	/**
