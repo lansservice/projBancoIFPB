@@ -12,7 +12,9 @@ package bancoifpb.classes.cliente;
 public class ClientePessoaJuridica extends Cliente {
 
 	private String cnpj;
-	private String renda;
+	private String razao;
+	private String ie;
+
 	
 	
 	public ClientePessoaJuridica() {
@@ -20,25 +22,60 @@ public class ClientePessoaJuridica extends Cliente {
 	}
 
 
+
+	/**
+	 * @return the cnpj
+	 */
 	public String getCnpj() {
 		return cnpj;
 	}
 
 
+
+	/**
+	 * @param cnpj the cnpj to set
+	 */
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
 
 
-	public String getRenda() {
-		return renda;
+
+	/**
+	 * @return the razao
+	 */
+	public String getRazao() {
+		return razao;
 	}
 
 
-	public void setRenda(String renda) {
-		this.renda = renda;
+
+	/**
+	 * @param razao the razao to set
+	 */
+	public void setRazao(String razao) {
+		this.razao = razao;
 	}
-	
+
+
+
+	/**
+	 * @return the ie
+	 */
+	public String getIe() {
+		return ie;
+	}
+
+
+
+	/**
+	 * @param ie the ie to set
+	 */
+	public void setIe(String ie) {
+		this.ie = ie;
+	}
+
+
 	
 
 }

@@ -3,8 +3,6 @@
  */
 package bancoifpb.classes.cliente;
 
-import java.util.Scanner;
-
 /**
  * @author Leonardo Costa Vieira
  * @author Alessandro
@@ -17,32 +15,46 @@ public class ClientePessoaFisica extends Cliente{
 	 * 
 	 */
 	private String cpf;
-	private double renda;
+	private String rg;
+
 	
-	private Scanner entrada = new Scanner(System.in); 
 	public ClientePessoaFisica() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getCPF() {
+
+	/**
+	 * @return the cpf
+	 */
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCPF(String cpf) {
-		while (cpf == null) {
-			System.out.println("CPF nao pode ficar em branco, digite novamente");
-			cpf = entrada.next();
-		}
+
+	/**
+	 * @param cpf the cpf to set
+	 */
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
-	public double getRenda() {
-		return renda;
+
+	/**
+	 * @return the rg
+	 */
+	public String getRg() {
+		return rg;
 	}
 
-	public void setRenda(double renda) {
-		this.renda = renda;
+
+	/**
+	 * @param rg the rg to set
+	 */
+	public void setRg(String rg) {
+		this.rg = rg;
 	}
+
+
 
 	
 	

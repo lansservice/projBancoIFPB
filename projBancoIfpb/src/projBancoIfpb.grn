@@ -4,8 +4,8 @@
       <name="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
       <height="-1"/>
       <width="-1"/>
-      <x="268"/>
-      <y="55"/>
+      <x="287"/>
+      <y="12"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
@@ -14,69 +14,34 @@
       <x="-13"/>
       <y="50"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
       <height="-1"/>
       <width="-1"/>
-      <x="578"/>
+      <x="644"/>
       <y="18"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.cliente{ClientePessoaFisica.java[ClientePessoaFisica"/>
       <height="-1"/>
       <width="-1"/>
-      <x="848"/>
-      <y="25"/>
+      <x="894"/>
+      <y="27"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes.cliente{ClientePessoaFisica.java[ClientePessoaFisica"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.cliente{ClientePessoaJuridica.java[ClientePessoaJuridica"/>
       <height="-1"/>
       <width="-1"/>
-      <x="842"/>
-      <y="282"/>
+      <x="909"/>
+      <y="286"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes.cliente{ClientePessoaJuridica.java[ClientePessoaJuridica"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
       <height="-1"/>
       <width="-1"/>
-      <x="230"/>
-      <y="256"/>
+      <x="223"/>
+      <y="277"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisica.java[ContaPessoaFisica"/>
       <height="-1"/>
@@ -84,13 +49,6 @@
       <x="112"/>
       <y="512"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisica.java[ContaPessoaFisica"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisicaEspecial.java[ContaPessoaFisicaEspecial"/>
       <height="-1"/>
@@ -98,13 +56,6 @@
       <x="274"/>
       <y="665"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisicaEspecial.java[ContaPessoaFisicaEspecial"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisica.java[ContaPessoaFisica"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridica.java[ContaPessoaJuridica"/>
       <height="-1"/>
@@ -112,13 +63,6 @@
       <x="369"/>
       <y="512"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridica.java[ContaPessoaJuridica"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridicaEspecial.java[ContaPessoaJuridicaEspecial"/>
       <height="-1"/>
@@ -126,13 +70,6 @@
       <x="570"/>
       <y="664"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridicaEspecial.java[ContaPessoaJuridicaEspecial"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridica.java[ContaPessoaJuridica"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPoupanca.java[ContaPoupanca"/>
       <height="-1"/>
@@ -140,10 +77,94 @@
       <x="33"/>
       <y="663"/>
    </type>
+   <type>
+      <name="=projBancoIfpb/src<bancoifpb.classes{Usuario.java[Usuario"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="-5"/>
+      <y="261"/>
+   </type>
+   <type>
+      <name="=projBancoIfpb/src<bancoifpb{Sistema.java[Sistema"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="-238"/>
+      <y="49"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPoupanca.java[ContaPoupanca"/>
       <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisica.java[ContaPessoaFisica"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisicaEspecial.java[ContaPessoaFisicaEspecial"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisica.java[ContaPessoaFisica"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridica.java[ContaPessoaJuridica"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes.cliente{ClientePessoaFisica.java[ClientePessoaFisica"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaFisica.java[ContaPessoaFisica"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes.cliente{ClientePessoaJuridica.java[ClientePessoaJuridica"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes{Usuario.java[Usuario"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridicaEspecial.java[ContaPessoaJuridicaEspecial"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.conta{ContaPessoaJuridica.java[ContaPessoaJuridica"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
+      <targetType="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
       <bendpoints>
       </bendpoints>
    </relationship>

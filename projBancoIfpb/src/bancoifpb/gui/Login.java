@@ -2,51 +2,71 @@ package bancoifpb.gui;
 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
+
+import bancoifpb.Sistema;
 
 public class Login extends JPanel {
   /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JButton jcomp1;
-    private JLabel jcomp2;
+	private JButton btn_login;
+    private JLabel lbl_titulo1;
     private JLabel lbl_usuario;
     private JTextField txt_usuario;
-    private JLabel jcomp5;
-    private JPasswordField jcomp6;
+    private JLabel lbl_senha;
+    private JPasswordField txt_senha;
 
   public Login() {
       //construct components
-      jcomp1 = new JButton ("Logar");
-      jcomp2 = new JLabel ("Digite seus Dados:");
+      btn_login = new JButton ("Logar");
+      lbl_titulo1 = new JLabel ("Digite seus Dados:");
       lbl_usuario = new JLabel ("Usuario:");
       txt_usuario = new JTextField (5);
-      jcomp5 = new JLabel ("Senha:");
-      jcomp6 = new JPasswordField (5);
+      lbl_senha = new JLabel ("Senha:");
+      txt_senha = new JPasswordField (5);
 
       //adjust size and set layout
-      setPreferredSize (new Dimension (667, 371));
+      setPreferredSize (new Dimension(307, 85));
       setLayout (null);
 
       //add components
-      add (jcomp1);
-      add (jcomp2);
+      add (btn_login);
+      add (lbl_titulo1);
       add (lbl_usuario);
       add (txt_usuario);
-      add (jcomp5);
-      add (jcomp6);
+      add (lbl_senha);
+      add (txt_senha);
 
       //set component bounds (only needed by Absolute Positioning)
-      jcomp1.setBounds (230, 50, 69, 20);
-      jcomp2.setBounds (18, 0, 118, 27);
+      btn_login.setBounds (230, 50, 69, 20);
+      lbl_titulo1.setBounds (18, 0, 118, 27);
       lbl_usuario.setBounds (18, 26, 50, 20);
       txt_usuario.setBounds (71, 26, 155, 20);
-      jcomp5.setBounds (18, 49, 100, 25);
-      jcomp6.setBounds (71, 50, 155, 20);
+      lbl_senha.setBounds (18, 49, 100, 25);
+      txt_senha.setBounds (71, 50, 155, 20);
+      
+      /** * Dando vida ao botao de login*/
+      ButtonHandler handler = new ButtonHandler();
+      btn_login.addActionListener(handler);
+       
   }
 
-
+  /** * Dando Vida ao Botao de Login*/
+  
+  private class ButtonHandler implements ActionListener {
+	  
+	  public void actionPerformed(ActionEvent event){
+		  Sistema.frm_menu.setVisible(true);
+		  Sistema.frm_login.setVisible(false);
+         	        
+	  }
+	  
+  }
 
 }
 

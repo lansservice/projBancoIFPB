@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="C:\apache-tomcat-6.0.35\lib\el-api.jar;C:\apache-tomcat-6.0.35\lib\jasper-el.jar;C:\apache-tomcat-6.0.35\lib\jsp-api.jar;C:\apache-tomcat-6.0.35\lib\catalina-ant.jar;C:\apache-tomcat-6.0.35\lib\catalina-tribes.jar;C:\apache-tomcat-6.0.35\lib\catalina.jar;C:\apache-tomcat-6.0.35\lib\jasper.jar;C:\apache-tomcat-6.0.35\lib\catalina-ha.jar;C:\apache-tomcat-6.0.35\lib\tomcat-i18n-fr.jar;C:\apache-tomcat-6.0.35\lib\tomcat-coyote.jar;C:\apache-tomcat-6.0.35\lib\tomcat-i18n-ja.jar;C:\apache-tomcat-6.0.35\lib\annotations-api.jar;C:\apache-tomcat-6.0.35\lib\ecj-3.7.jar;C:\apache-tomcat-6.0.35\lib\tomcat-i18n-es.jar;C:\apache-tomcat-6.0.35\lib\servlet-api.jar;C:\apache-tomcat-6.0.35\lib\tomcat-dbcp.jar" destdir="C:\Documents and Settings\Administrador\Desktop" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="bancoifpb.classes,bancoifpb.gui,bancoifpb,bancoifpb.classes.cliente,bancoifpb.classes.conta" source="1.7" sourcepath="src" splitindex="true" use="true" version="true">
+            <link href="http://download.oracle.com/javase/7/docs/api/"/>
+        </javadoc>
+    </target>
+</project>

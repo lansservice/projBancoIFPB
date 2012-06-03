@@ -6,6 +6,8 @@ package bancoifpb.classes;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 /**
  * @author Leonardo Costa Vieira
  * @author Alessandro
@@ -13,13 +15,14 @@ import java.util.List;
 public class Banco {
 
 	private List<Agencia> agencia;
-
+	private List<Usuario> usuario;
 	/**
 	 * 
 	 */
 	public Banco() {
 		agencia = new ArrayList<Agencia>();
-		// TODO Auto-generated constructor stub
+		usuario = new ArrayList<Usuario>();
+
 	}
 
 	public List<Agencia> getAgencia() {
@@ -28,6 +31,24 @@ public class Banco {
 
 	public void setAgencia(List<Agencia> agencia) {
 		this.agencia = agencia;
+
 	}
 
+	/**
+	 * @return the usuario
+	 */
+	public List<Usuario> getUsuario() {
+		return usuario;
+
+	}
+
+	/**
+	 * @param usuario the usuario to set
+	 */
+	public void setUsuario(List<Usuario> usuario) {
+		this.usuario = usuario;
+
+	}
+	
+	
 }
