@@ -15,18 +15,27 @@ import bancoifpb.classes.conta.*;
  */
 public class Agencia {
 
-	private List<Cliente> cliente;
+	private List<Cliente> cliente = new ArrayList<Cliente>();
 	private List<Conta> conta;
-	private int numAgencia;
+	private String numAgencia;
 	private String endAgencia;
+	private String ufAgencia;
+	private String cidadeAgencia;
+	private String bairroAgencia;
 
 	public Agencia() {
-		this.conta = new ArrayList<Conta>();
-		this.cliente = new ArrayList<Cliente>();
-		this.numAgencia = 0;
+		this.numAgencia = null;
 		this.endAgencia = null;
 	}
-
+	
+	public Cliente getClienteAgencia(String nome){
+		for (int i = 0; i < this.cliente.size(); i++) {
+			if (nome.equals(cliente.get(i).getCliNome())){
+				return cliente.get(i);
+			}
+		}return null;
+	}
+	
 	public List<Cliente> getCliente() {
 		return cliente;
 	}
@@ -46,14 +55,14 @@ public class Agencia {
 	/**
 	 * @return the numAgencia
 	 */
-	public int getNumAgencia() {
+	public String getNumAgencia() {
 		return numAgencia;
 	}
 
 	/**
 	 * @param numAgencia the numAgencia to set
 	 */
-	public void setNumAgencia(int numAgencia) {
+	public void setNumAgencia(String numAgencia) {
 		this.numAgencia = numAgencia;
 	}
 
@@ -71,4 +80,47 @@ public class Agencia {
 		this.endAgencia = endAgencia;
 	}
 
+	/**
+	 * @return the ufAgencia
+	 */
+	public String getUfAgencia() {
+		return ufAgencia;
+	}
+
+	/**
+	 * @param ufAgencia the ufAgencia to set
+	 */
+	public void setUfAgencia(String ufAgencia) {
+		this.ufAgencia = ufAgencia;
+	}
+
+	/**
+	 * @return the cidadeAgencia
+	 */
+	public String getCidadeAgencia() {
+		return cidadeAgencia;
+	}
+
+	/**
+	 * @param cidadeAgencia the cidadeAgencia to set
+	 */
+	public void setCidadeAgencia(String cidadeAgencia) {
+		this.cidadeAgencia = cidadeAgencia;
+	}
+
+	/**
+	 * @return the bairroAgencia
+	 */
+	public String getBairroAgencia() {
+		return bairroAgencia;
+	}
+
+	/**
+	 * @param bairroAgencia the bairroAgencia to set
+	 */
+	public void setBairroAgencia(String bairroAgencia) {
+		this.bairroAgencia = bairroAgencia;
+	}
+
+	
 }

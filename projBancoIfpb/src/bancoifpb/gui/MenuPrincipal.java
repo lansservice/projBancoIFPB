@@ -14,6 +14,7 @@ public class MenuPrincipal extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
     private JButton btn_cad_agencia;
     private JButton btn_cad_cliente;
     private JButton btn_pesq_cli;
@@ -52,6 +53,7 @@ public class MenuPrincipal extends JPanel {
         setMinimumSize(getPreferredSize());
         setLayout(null);
 
+        
         //add components
         add (btn_cad_agencia);
         add (btn_cad_cliente);

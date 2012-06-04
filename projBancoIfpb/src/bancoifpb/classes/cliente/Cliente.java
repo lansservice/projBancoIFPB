@@ -3,7 +3,6 @@
  */
 package bancoifpb.classes.cliente;
 
-
 /**
  * @author Leonardo Costa Vieira
  * @author Alessandro
@@ -30,10 +29,10 @@ public class Cliente {
 	
 	private String fone;
 	
+	private String agencia;
 	
 	public Cliente() {
 	}
-
 
 	/**
 	 * @return the cliNome
@@ -42,14 +41,12 @@ public class Cliente {
 		return cliNome;
 	}
 
-
 	/**
 	 * @param cliNome the cliNome to set
 	 */
 	public void setCliNome(String cliNome) {
 		this.cliNome = cliNome;
 	}
-
 
 	/**
 	 * @return the cliSobrenome
@@ -58,14 +55,12 @@ public class Cliente {
 		return cliSobrenome;
 	}
 
-
 	/**
 	 * @param cliSobrenome the cliSobrenome to set
 	 */
 	public void setCliSobrenome(String cliSobrenome) {
 		this.cliSobrenome = cliSobrenome;
 	}
-
 
 	/**
 	 * @return the cliEnd
@@ -74,14 +69,12 @@ public class Cliente {
 		return cliEnd;
 	}
 
-
 	/**
 	 * @param cliEnd the cliEnd to set
 	 */
 	public void setCliEnd(String cliEnd) {
 		this.cliEnd = cliEnd;
 	}
-
 
 	/**
 	 * @return the cliEndNum
@@ -90,14 +83,12 @@ public class Cliente {
 		return cliEndNum;
 	}
 
-
 	/**
 	 * @param cliEndNum the cliEndNum to set
 	 */
 	public void setCliEndNum(String cliEndNum) {
 		this.cliEndNum = cliEndNum;
 	}
-
 
 	/**
 	 * @return the bairro
@@ -106,14 +97,12 @@ public class Cliente {
 		return bairro;
 	}
 
-
 	/**
 	 * @param bairro the bairro to set
 	 */
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-
 
 	/**
 	 * @return the cidade
@@ -122,14 +111,12 @@ public class Cliente {
 		return cidade;
 	}
 
-
 	/**
 	 * @param cidade the cidade to set
 	 */
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-
 
 	/**
 	 * @return the uf
@@ -138,14 +125,12 @@ public class Cliente {
 		return uf;
 	}
 
-
 	/**
 	 * @param uf the uf to set
 	 */
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-
 
 	/**
 	 * @return the limite
@@ -154,14 +139,12 @@ public class Cliente {
 		return limite;
 	}
 
-
 	/**
 	 * @param limite the limite to set
 	 */
 	public void setLimite(String limite) {
 		this.limite = limite;
 	}
-
 
 	/**
 	 * @return the fone
@@ -170,14 +153,26 @@ public class Cliente {
 		return fone;
 	}
 
-
 	/**
 	 * @param fone the fone to set
 	 */
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
-	
+
+	/**
+	 * @return the agencia
+	 */
+	public String getAgencia() {
+		return agencia;
+	}
+
+	/**
+	 * @param agencia the agencia to set
+	 */
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
 	
 
 }

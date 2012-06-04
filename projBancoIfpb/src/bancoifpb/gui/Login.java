@@ -26,8 +26,8 @@ public class Login extends JPanel {
       btn_login = new JButton ("Logar");
       lbl_titulo1 = new JLabel ("Digite seus Dados:");
       lbl_usuario = new JLabel ("Usuario:");
-      txt_usuario = new JTextField (5);
       lbl_senha = new JLabel ("Senha:");
+      txt_usuario = new JTextField (5);
       txt_senha = new JPasswordField (5);
 
       //adjust size and set layout
@@ -38,17 +38,17 @@ public class Login extends JPanel {
       add (btn_login);
       add (lbl_titulo1);
       add (lbl_usuario);
-      add (txt_usuario);
       add (lbl_senha);
+      add (txt_usuario);
       add (txt_senha);
 
       //set component bounds (only needed by Absolute Positioning)
-      btn_login.setBounds (230, 50, 69, 20);
       lbl_titulo1.setBounds (18, 0, 118, 27);
       lbl_usuario.setBounds (18, 26, 50, 20);
-      txt_usuario.setBounds (71, 26, 155, 20);
       lbl_senha.setBounds (18, 49, 100, 25);
+      txt_usuario.setBounds (71, 26, 155, 20);
       txt_senha.setBounds (71, 50, 155, 20);
+      btn_login.setBounds (230, 50, 69, 20);
       
       /** * Dando vida ao botao de login*/
       ButtonHandler handler = new ButtonHandler();
