@@ -20,13 +20,9 @@ import java.util.HashMap;
 
 public class Conta {
 	
-	/** * Lista de Depositos*/
-	private HashMap<String, Deposito> map_deposito = new HashMap<String, Deposito>();
-	/** * Lista de Saques*/
-	private HashMap<String, Saque> map_saque = new HashMap<String, Saque>();
 	
 	/** * Lista do Extrato*/
-	private HashMap<String, Extrato> map_extrato = new HashMap<String, Extrato>();
+	private HashMap<String, ExtratoClasse> map_extrato = new HashMap<String, ExtratoClasse>();
 	
 	/** * Valor fixo em percentagem para algumas movimentaçoes financeiras*/
 	final double IOF = 0.01;
@@ -45,46 +41,12 @@ public class Conta {
 	public Conta() {
 		this.numConta = "00000";
 		this.cpf = "";
-		
 	}
-
-
-	/**
-	 * @return the map_deposito
-	 */
-	public HashMap<String, Deposito> getMap_deposito() {
-		return map_deposito;
-	}
-
-
-	/**
-	 * @param map_deposito the map_deposito to set
-	 */
-	public void setMap_deposito(HashMap<String, Deposito> map_deposito) {
-		this.map_deposito = map_deposito;
-	}
-
-
-	/**
-	 * @return the map_saque
-	 */
-	public HashMap<String, Saque> getMap_saque() {
-		return map_saque;
-	}
-
-
-	/**
-	 * @param map_saque the map_saque to set
-	 */
-	public void setMap_saque(HashMap<String, Saque> map_saque) {
-		this.map_saque = map_saque;
-	}
-
 
 	/**
 	 * @return the map_extrato
 	 */
-	public HashMap<String, Extrato> getMap_extrato() {
+	public HashMap<String, ExtratoClasse> getMap_extrato() {
 		return map_extrato;
 	}
 
@@ -92,7 +54,7 @@ public class Conta {
 	/**
 	 * @param map_extrato the map_extrato to set
 	 */
-	public void setMap_extrato(HashMap<String, Extrato> map_extrato) {
+	public void setMap_extrato(HashMap<String, ExtratoClasse> map_extrato) {
 		this.map_extrato = map_extrato;
 	}
 

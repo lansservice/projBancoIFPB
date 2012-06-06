@@ -9,28 +9,27 @@ package bancoifpb.classes;
  */
 public class Usuario {
 	
-	private String usuario;
+	private String login;
 	private String senha;
+	private String nome;
 	/**
 	 * @param usuario
 	 * @param senha
 	 */
 	public Usuario() {
-		super();
-		this.usuario = "admin";
-		this.senha = "1234567";
+
 	}
 	/**
-	 * @return the usuario
+	 * @return the login
 	 */
-	public String getUsuario() {
-		return usuario;
+	public String getLogin() {
+		return login;
 	}
 	/**
-	 * @param usuario the usuario to set
+	 * @param login the login to set
 	 */
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	/**
 	 * @return the senha
@@ -44,6 +43,19 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
+	}
+	/**
+	 * @param nome the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	
 	
 	

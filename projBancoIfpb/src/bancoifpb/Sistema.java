@@ -3,6 +3,7 @@ package bancoifpb;
 import javax.swing.JFrame;
 
 import bancoifpb.classes.Banco;
+import bancoifpb.classes.Usuario;
 import bancoifpb.classes.validadores.ValoresJanela;
 
 public class Sistema {
@@ -50,7 +51,8 @@ public class Sistema {
 	
 	/** *Criando o Banco */
 	public static Banco banco = new Banco();
-
+	public static Usuario user1 = new Usuario();
+	
 	public static void main(String[] args) {
 		/** *Preenchendo os valores nos formularios */
 		ValoresJanela.frmLogin();
@@ -65,7 +67,14 @@ public class Sistema {
         ValoresJanela.frmExtrato();
         ValoresJanela.frmSaldo();
         ValoresJanela.frmAltSenha();
+        ValoresJanela.frmExcluirConta();
+        ValoresJanela.frmPesquisaConta();
         
+        user1.setLogin("admin");
+        user1.setNome("admin");
+        user1.setSenha("123");
+        
+        banco.getMap_usuario().put(user1.getLogin(), user1);
         
         /** *Chamando a janela de Login */
         frm_login.setVisible (true);

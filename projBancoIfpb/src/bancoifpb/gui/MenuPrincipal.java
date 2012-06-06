@@ -153,7 +153,8 @@ public class MenuPrincipal extends JPanel {
 			estadoJanela.JanelaVisibleFalse();
 			Sistema.frm_salvar_estado.setVisible(true);
 		}else if (event.getSource() == btn_sair) {
-			JOptionPane.showMessageDialog(null, "Sistema Funcionando");			
+			System.exit(0);
+		
 			
 		}
   	  }

@@ -26,6 +26,7 @@ public class EstadoJanela {
 		Sistema.frm_saldo.setVisible(false);
 		Sistema.frm_saque.setVisible(false);
 		Sistema.frm_salvar_estado.setVisible(false);
+		Sistema.frm_login.setVisible(false);
 
 	}
 

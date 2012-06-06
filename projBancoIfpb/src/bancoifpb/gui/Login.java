@@ -8,12 +8,14 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import bancoifpb.Sistema;
+import bancoifpb.classes.validadores.EstadoJanela;
 
 public class Login extends JPanel {
   /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	EstadoJanela estadoJanela = new EstadoJanela();
 	private JButton btn_login;
     private JLabel lbl_titulo1;
     private JLabel lbl_usuario;
@@ -61,12 +63,24 @@ public class Login extends JPanel {
   private class ButtonHandler implements ActionListener {
 	  
 	  public void actionPerformed(ActionEvent event){
-		  Sistema.frm_menu.setVisible(true);
-		  Sistema.frm_login.setVisible(false);
+		  ValidaUsuario();
          	        
 	  }
 	  
   }
-
+  
+  @SuppressWarnings("deprecation")
+public void ValidaUsuario(){
+	   if (Sistema.banco.getMap_usuario().containsKey(txt_usuario.getText()) == true) {
+		   if (Sistema.banco.getUsuarioMapa(txt_usuario.getText()).getSenha().equals(txt_senha.getText())) {
+			JOptionPane.showMessageDialog(null, "Usuario Cadastro!! Seja Bem vindo!!");
+			estadoJanela.JanelaVisibleFalse();
+		} else {
+			JOptionPane.showMessageDialog(null, "Usuario Nao Cadastrado!! Digite Novamente");
+		}
+	}
+	  
+	  
+  }
 }
 

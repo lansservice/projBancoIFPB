@@ -70,7 +70,7 @@ public class ExcluirCliente extends JPanel {
     private class ButtonHandler implements ActionListener {
    	  public void actionPerformed(ActionEvent event){
    		  if (event.getSource()== btn_excluir) {
-   			  PesquisarClienteAgencia();
+   			  ExcluirClienteAgencia();
    			  }
    		  if (event.getSource()== btn_sair) {
    			  Sair();
@@ -78,7 +78,7 @@ public class ExcluirCliente extends JPanel {
   }
 		
     }
-    private void PesquisarClienteAgencia() {
+    private void ExcluirClienteAgencia() {
     	
     	if (Sistema.banco.getMap_agencia().containsKey(txt_agencia.getText()) == true){
     		if (Sistema.banco.getAgenciaMapa(txt_agencia.getText()).getMap_cliente().containsKey(txt_cpf.getText()) == true) {

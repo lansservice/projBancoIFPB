@@ -69,10 +69,26 @@ public class Banco {
 		return null;
 	}
 	
+	public Usuario getUsuarioMapa(String nome){
+		
+		if (map_usuario.containsKey(nome)) {
+			JOptionPane.showMessageDialog(null, "Usuario encontrado!");
+			return map_usuario.get(nome);
+			
+		} else {
+			JOptionPane.showMessageDialog(null, "Usuario nao encontrado");
+		}
+		return null;
+	}
+	
 	public void setAgenciaMapa(String numAgencia, Agencia agencia){
 		
 		map_agencia.put(numAgencia, agencia);
 	}
 	
+	public void setUsuarioMapa(String login, Usuario usuario){
+		
+		map_usuario.put(login, usuario);
+	}
 	
 }

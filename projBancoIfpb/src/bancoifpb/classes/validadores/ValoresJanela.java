@@ -3,6 +3,7 @@ package bancoifpb.classes.validadores;
 import javax.swing.JFrame;
 
 import bancoifpb.Sistema;
+import bancoifpb.gui.ExcluirConta;
 import bancoifpb.gui.CadastroAgencia;
 import bancoifpb.gui.CadastroConta;
 import bancoifpb.gui.CadastroCliente;
@@ -13,6 +14,7 @@ import bancoifpb.gui.Extrato;
 import bancoifpb.gui.Login;
 import bancoifpb.gui.MenuPrincipal;
 import bancoifpb.gui.PesquisaCliente;
+import bancoifpb.gui.PesquisaConta;
 import bancoifpb.gui.Saldo;
 import bancoifpb.gui.Saque;
 
@@ -62,6 +64,14 @@ public class ValoresJanela {
         Sistema.frm_pesquisa_cliente.getContentPane().add (new PesquisaCliente());
         Sistema.frm_pesquisa_cliente.pack();
 	}
+	public static void frmPesquisaConta(){
+		/** *Setando os valores da Janela de Pesquisa de Clientes*/        
+		Sistema.frm_pesquisa_conta.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+		Sistema.frm_pesquisa_conta.setLocationRelativeTo(null);
+		Sistema.frm_pesquisa_conta.setTitle("Pesquisa de Conta");
+		Sistema.frm_pesquisa_conta.getContentPane().add (new PesquisaConta());
+		Sistema.frm_pesquisa_conta.pack();
+	}
 	
 	public static void frmExcluirCliente(){
 		/** *Setando os valores da Janela de Pesquisa de Clientes*/        
@@ -70,6 +80,15 @@ public class ValoresJanela {
         Sistema.frm_excluir_cliente.setTitle("Excluir Cliente");
         Sistema.frm_excluir_cliente.getContentPane().add (new ExcluirCliente());
         Sistema.frm_excluir_cliente.pack();
+	}
+	
+	public static void frmExcluirConta(){
+		/** *Setando os valores da Janela de Pesquisa de Clientes*/        
+        Sistema.frm_excluir_conta.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        Sistema.frm_excluir_conta.setLocationRelativeTo(null);
+        Sistema.frm_excluir_conta.setTitle("Excluir Conta");
+        Sistema.frm_excluir_conta.getContentPane().add(new ExcluirConta());
+        Sistema.frm_excluir_conta.pack();
 	}
 
 	public static void frmCadastroConta() {
@@ -126,11 +145,11 @@ public class ValoresJanela {
 	public static void frmAltSenha() {
 		// TODO Auto-generated method stub
 		/** *Setando os valores da Janela de Pesquisa de Clientes*/        
-        Sistema.frm_saldo.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-        Sistema.frm_saldo.setLocationRelativeTo(null);
-        Sistema.frm_saldo.setTitle("Alterar Senha");
-        Sistema.frm_saldo.getContentPane().add (new CadastroUsuario());
-        Sistema.frm_saldo.pack();
+        Sistema.frm_alt_senha.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        Sistema.frm_alt_senha.setLocationRelativeTo(null);
+        Sistema.frm_alt_senha.setTitle("Alterar Senha");
+        Sistema.frm_alt_senha.getContentPane().add (new CadastroUsuario());
+        Sistema.frm_alt_senha.pack();
 		
 	}
 	
