@@ -8,8 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import bancoifpb.Sistema;
-import bancoifpb.classes.cliente.ClientePessoaFisica;
-import bancoifpb.classes.cliente.ClientePessoaJuridica;
+import bancoifpb.classes.Agencia;
+import bancoifpb.classes.cliente.Cliente;
 import bancoifpb.classes.validadores.EstadoJanela;
 
 
@@ -33,8 +33,6 @@ public class CadastroCliente extends JPanel {
     private JTextField txt_bairro;
     private JTextField txt_cidade;
     private JLabel lbl_uf;
-    private JRadioButton rdo_pf;
-    private JRadioButton rdo_pj;
     private JLabel lbl_end_num;
     private JTextField txt_end_num;
     private JTextField txt_rg;
@@ -44,24 +42,21 @@ public class CadastroCliente extends JPanel {
     private JButton btn_cadastrar;
     private JButton btn_cancelar;
     private JTextField txt_uf;
-    private JLabel lbl_razao_social;
-    private JTextField txt_razao_social;
-    private ButtonGroup rd_pessoa;
     private JTextField txt_limite;
     private JLabel lbl_limite;
     private JTextField txt_agencia;
-
+    private JLabel lbl_agencia;
     public CadastroCliente() {
 
         //construct components
         txt_nome = new JTextField (5);
+        lbl_agencia = new JLabel("Agencia");
         txt_end_num = new JTextField (5);
         txt_agencia = new JTextField();
         txt_sobrenome = new JTextField (5);
         txt_end = new JTextField (5);
         txt_bairro = new JTextField (5);
         txt_limite = new JTextField();
-        txt_razao_social = new JTextField (5);
         txt_fone = new JTextField (5);
         txt_cpf = new JTextField (0);
         txt_rg = new JTextField (5);
@@ -76,11 +71,8 @@ public class CadastroCliente extends JPanel {
         lbl_uf = new JLabel ("UF:");
         lbl_rg = new JLabel ("RG / IE:");
         lbl_fone = new JLabel ("Fone:");
-        lbl_razao_social = new JLabel ("Razao Social:");
         lbl_nome = new JLabel ("Nome:");
         lbl_limite = new JLabel("Limite:");
-        rdo_pj = new JRadioButton ("Pessoa Juridica" , false);
-        rdo_pf = new JRadioButton ("Pessoa Fisica" , true);
         btn_cadastrar = new JButton ("Cadastrar");
         btn_cancelar = new JButton ("Cancelar");
 
@@ -109,8 +101,8 @@ public class CadastroCliente extends JPanel {
         add (lbl_bairro);
         add (lbl_end_num);
         add (lbl_fone);
-        add (lbl_razao_social);
         add (lbl_limite);
+        add(lbl_agencia);
         add (lbl_rg);
         add (lbl_uf);
         add (txt_agencia);
@@ -124,64 +116,47 @@ public class CadastroCliente extends JPanel {
         add (txt_rg);
         add (txt_fone);
         add (txt_uf);
-        add (txt_razao_social);
         add (txt_limite);
-        add (rdo_pf);
-        add (rdo_pj);
         add (btn_cadastrar);
         add (btn_cancelar);
         
 
         //set component bounds (only needed by Absolute Positioning)
-        txt_cidade.setBounds (305, 123, 178, 20);
+        txt_cidade.setBounds (305, 100, 178, 20);
         txt_rg.setBounds (329, 22, 152, 20);
-        txt_uf.setBounds (505, 123, 54, 20);
-        txt_nome.setBounds (55, 72, 150, 20);
+        txt_uf.setBounds (505, 100, 54, 20);
+        txt_nome.setBounds (55, 50, 150, 20);
         txt_cpf.setBounds (78, 22, 210, 20);
-        txt_sobrenome.setBounds (282, 72, 235, 20);
-        txt_end.setBounds (75, 98, 442, 20);
-        txt_bairro.setBounds (55, 123, 200, 20);
-        txt_fone.setBounds (50, 150, 170, 20);
+        txt_sobrenome.setBounds (282, 50, 235, 20);
+        txt_end.setBounds (75, 76, 442, 20);
+        txt_bairro.setBounds (55, 100, 200, 20);
+        txt_fone.setBounds (50, 127, 170, 20);
         txt_limite.setColumns(10);
-        txt_razao_social.setBounds (93, 46, 400, 20);
-        txt_limite.setBounds(282, 150, 86, 20);
-        txt_agencia.setBounds(438, 150, 86, 20);
-        txt_end_num.setBounds (535, 98, 50, 20);
-        lbl_sobrenome.setBounds (210, 68, 72, 25);
-        lbl_nome.setBounds (15, 68, 39, 25);
-        lbl_end.setBounds (15, 95, 100, 25);
+        txt_limite.setBounds(282, 127, 86, 20);
+        txt_agencia.setBounds(438, 127, 86, 20);
+        txt_end_num.setBounds (535, 76, 50, 20);
+        lbl_sobrenome.setBounds (210, 46, 72, 25);
+        lbl_nome.setBounds (15, 46, 39, 25);
+        lbl_end.setBounds (15, 73, 100, 25);
         lbl_cpf.setBounds (15, 20, 63, 25);
-        lbl_cidade.setBounds (260, 123, 49, 25);
-        lbl_bairro.setBounds (15, 123, 66, 25);
-        lbl_uf.setBounds (485, 123, 25, 20);
-        lbl_end_num.setBounds (520, 95, 15, 25);
-        lbl_fone.setBounds (15, 150, 33, 25);
+        lbl_cidade.setBounds (260, 100, 49, 25);
+        lbl_bairro.setBounds (15, 100, 66, 25);
+        lbl_uf.setBounds (485, 100, 25, 20);
+        lbl_end_num.setBounds (520, 73, 15, 25);
+        lbl_fone.setBounds (15, 127, 33, 25);
         lbl_rg.setBounds (291, 20, 42, 25);
-        lbl_limite.setBounds(246, 154, 46, 14);
-        lbl_razao_social.setBounds (15, 43, 79, 25);
-        rdo_pf.setBounds (10, 0, 159, 25);
-        rdo_pj.setBounds (170, 0, 125, 25);
+        lbl_agencia.setBounds(392, 131, 46, 14);
+        lbl_limite.setBounds(246, 131, 46, 14);
         btn_cadastrar.setBounds (371, 175, 100, 20);
         btn_cancelar.setBounds (485, 175, 100, 20);
         txt_agencia.setColumns(10);
-        
-        /** *Propriedades do RadioButton (Agrupando-os como um grupo*/
-        rd_pessoa = new ButtonGroup();
-        rd_pessoa.add(rdo_pf);
-        rd_pessoa.add(rdo_pj);
-        
-        
-        JLabel lbl_agencia = new JLabel("Agencia:");
-        lbl_agencia.setBounds(392, 154, 46, 14);
-        add(lbl_agencia);
-        
-        
+    
+
         /** * Pegando os eventos de cada botao */
         ButtonHandler handler = new ButtonHandler();
         btn_cadastrar.addActionListener(handler);
         btn_cancelar.addActionListener(handler);
-   
- 
+
     }
     
     
@@ -189,24 +164,22 @@ public class CadastroCliente extends JPanel {
      	  public void actionPerformed(ActionEvent event){
      		  if (event.getSource()== btn_cadastrar) {
      			  SalvarCliente();
-     			  estadoJanela.JanelaVisibleFalse();
      		  }
      		  
      		  if (event.getSource()== btn_cancelar) {
      			  Cancelar();
-     			  estadoJanela.JanelaVisibleFalse();	
      		  }
      	  }
     }
     
     private void SalvarCliente(){
+
+    		Cliente cli = new Cliente();
     	
-    	if (rdo_pf.isSelected()) {
-			ClientePessoaFisica cli = new ClientePessoaFisica();
 			cli.setCliNome(txt_nome.getText());
 			cli.setCliSobrenome(txt_sobrenome.getText());
-			cli.setCpf(txt_cpf.getText());
-			cli.setRg(txt_rg.getText());
+			cli.setCpf_cnpj(txt_cpf.getText());
+			cli.setRg_ie(txt_rg.getText());
 			cli.setCliEnd(txt_end.getText());
 			cli.setCliEndNum(txt_end_num.getText());
 			cli.setBairro(txt_bairro.getText());
@@ -214,33 +187,28 @@ public class CadastroCliente extends JPanel {
 			cli.setUf(txt_uf.getText());
 			cli.setLimite(txt_limite.getText());
 			cli.setAgencia(txt_agencia.getText());
-    	}
-    	
-    	if (rdo_pj.isSelected()) {
-			ClientePessoaJuridica cli = new ClientePessoaJuridica();
-			cli.setRazao(txt_razao_social.getText());
-			cli.setCliNome(txt_nome.getText());
-			cli.setCliSobrenome(txt_sobrenome.getText());
-			cli.setCnpj(txt_cpf.getText());
-			cli.setIe(txt_rg.getText());
-			cli.setCliEnd(txt_end.getText());
-			cli.setCliEndNum(txt_end_num.getText());
-			cli.setBairro(txt_bairro.getText());
-			cli.setCidade(txt_cidade.getText());
-			cli.setUf(txt_uf.getText());
-			cli.setLimite(txt_limite.getText());
-			cli.setAgencia(txt_agencia.getText());
-    	}
-    	
-    	JOptionPane.showMessageDialog(null, "Cliente Gravado com Sucesso");
-    	Sistema.frm_cadastro_cliente.getContentPane().removeAll();
-    	Sistema.frm_cadastro_cliente.getContentPane().add(new CadastroCliente());
+			
+			if (Sistema.banco.getMap_agencia().containsKey(txt_agencia.getText()) == true) {
+				Sistema.banco.getMap_agencia().get(txt_agencia.getText()).setClienteAgencia(cli.getCpf_cnpj(), cli);
+			}else {
+				JOptionPane.showMessageDialog(null, "Agencia nao encontrada no Banco, sera Cadastrada uma nova Agencia!");
+				Agencia agen = new Agencia(txt_agencia.getText(), txt_uf.getText(), txt_cidade.getText());
+				Sistema.banco.setAgenciaMapa(txt_agencia.getText(), agen );
+				Sistema.banco.getMap_agencia().get(txt_agencia.getText()).setClienteAgencia(cli.getCpf_cnpj(), cli);
+			}
+			
+ 	
+	    	JOptionPane.showMessageDialog(null, "Cliente Gravado com Sucesso");
+	    	Sistema.frm_cadastro_cliente.getContentPane().removeAll();
+	    	Sistema.frm_cadastro_cliente.getContentPane().add(new CadastroCliente());
+	    	estadoJanela.JanelaVisibleFalse();
     }
     
     private void Cancelar(){
     	JOptionPane.showMessageDialog(null, "Voce cancelou o cadastro!!");
     	Sistema.frm_cadastro_cliente.getContentPane().removeAll();
     	Sistema.frm_cadastro_cliente.getContentPane().add(new CadastroCliente());
+    	estadoJanela.JanelaVisibleFalse();	
     }
 }
     

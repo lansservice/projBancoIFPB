@@ -114,8 +114,10 @@ public class CadastroAgencia extends JPanel {
     	agencia.setCidadeAgencia(txt_cidade_agencia.getText());
     	agencia.setUfAgencia(txt_uf_agencia.getText());
     	
+    	/** *Salvando a agencia no banco */
+    	Sistema.banco.setAgenciaMapa(txt_num_agencia.getText(), agencia);
     	
-    	JOptionPane.showMessageDialog(null, "Cliente Gravado com Sucesso");
+    	JOptionPane.showMessageDialog(null, "Agencia Gravada com Sucesso");
     	Sistema.frm_cadastro_agencia.getContentPane().removeAll();
     	Sistema.frm_cadastro_agencia.getContentPane().add(new CadastroAgencia());
     	estadoJanela.JanelaVisibleFalse();

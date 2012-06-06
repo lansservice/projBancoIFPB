@@ -3,8 +3,10 @@
  */
 package bancoifpb.classes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+
+import javax.swing.JOptionPane;
+
 import bancoifpb.classes.cliente.*;
 import bancoifpb.classes.conta.*;
 
@@ -15,8 +17,8 @@ import bancoifpb.classes.conta.*;
  */
 public class Agencia {
 
-	private List<Cliente> cliente = new ArrayList<Cliente>();
-	private List<Conta> conta;
+	private HashMap<String, Cliente> map_cliente = new HashMap<String, Cliente>();
+	private HashMap<String, Conta> map_conta = new HashMap<String, Conta>();
 	private String numAgencia;
 	private String endAgencia;
 	private String ufAgencia;
@@ -24,32 +26,80 @@ public class Agencia {
 	private String bairroAgencia;
 
 	public Agencia() {
-		this.numAgencia = null;
-		this.endAgencia = null;
+		
 	}
 	
-	public Cliente getClienteAgencia(String nome){
-		for (int i = 0; i < this.cliente.size(); i++) {
-			if (nome.equals(cliente.get(i).getCliNome())){
-				return cliente.get(i);
-			}
-		}return null;
+	public Agencia(String numAgencia, String uf, String cidade) {
+		this.numAgencia = numAgencia;
+		this.endAgencia = "";
+		this.cidadeAgencia = cidade;
+		this.ufAgencia = uf;
+		this.bairroAgencia = "";
 	}
 	
-	public List<Cliente> getCliente() {
-		return cliente;
+
+	/**
+	 * @return the map_cliente
+	 */
+	public HashMap<String, Cliente> getMap_cliente() {
+		return map_cliente;
+	}
+	
+	/** * */
+	public void setClienteAgencia(String cpf, Cliente cliente){
+		
+		map_cliente.put(cpf, cliente);
+	}
+	
+	public void setContaAgencia(String numConta, Conta conta){
+		
+		map_conta.put(numConta, conta);
 	}
 
-	public void setCliente(List<Cliente> cliente) {
-		this.cliente = cliente;
+	public Cliente getClienteAgencia(String cpf){
+		if (map_cliente.containsKey(cpf)) {
+			JOptionPane.showMessageDialog(null, "Cliente encontrado!");
+			return map_cliente.get(cpf);
+			
+		} else {
+			JOptionPane.showMessageDialog(null, "Cliente nao encontrada");
+		}
+		
+		return null;
+	}
+	
+	public Conta getContaAgencia(String numConta){
+		if (map_conta.containsKey(numConta)) {
+			JOptionPane.showMessageDialog(null, "Conta encontrada");
+			return map_conta.get(numConta);
+		} else {
+			JOptionPane.showMessageDialog(null, "Conta nao Encontrada");
+		}
+		return null;
 	}
 
-	public List<Conta> getConta() {
-		return conta;
+	/**
+	 * @param map_cliente the map_cliente to set
+	 */
+	public void setMap_cliente(HashMap<String, Cliente> map_cliente) {
+		this.map_cliente = map_cliente;
 	}
 
-	public void setConta(List<Conta> conta) {
-		this.conta = conta;
+
+
+	/**
+	 * @return the map_conta
+	 */
+	public HashMap<String, Conta> getMap_conta() {
+		return map_conta;
+	}
+
+
+	/**
+	 * @param map_conta the map_conta to set
+	 */
+	public void setMap_conta(HashMap<String, Conta> map_conta) {
+		this.map_conta = map_conta;
 	}
 
 	/**

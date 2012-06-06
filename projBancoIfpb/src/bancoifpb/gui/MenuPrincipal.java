@@ -6,7 +6,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+
 import bancoifpb.Sistema;
+import bancoifpb.classes.validadores.EstadoJanela;
 
 
 public class MenuPrincipal extends JPanel {
@@ -14,7 +16,8 @@ public class MenuPrincipal extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	EstadoJanela estadoJanela = new EstadoJanela();
+	
     private JButton btn_cad_agencia;
     private JButton btn_cad_cliente;
     private JButton btn_pesq_cli;
@@ -29,7 +32,8 @@ public class MenuPrincipal extends JPanel {
     private JButton btn_alt_senha;
     private JButton btn_salvar_estado;
     private JButton btn_sair;
-
+    
+ 
     public MenuPrincipal() {
         //construct components
         btn_cad_agencia = new JButton ("Cadastrar Agencia");
@@ -88,21 +92,69 @@ public class MenuPrincipal extends JPanel {
 
         /** * Dando vida aos botoes do Sistema */
         ButtonHandler handler = new ButtonHandler();
+        btn_alt_senha.addActionListener(handler);
         btn_cad_agencia.addActionListener(handler);
         btn_cad_cliente.addActionListener(handler);
+        btn_cad_conta.addActionListener(handler);
+        btn_deposito.addActionListener(handler);
+        btn_extrato.addActionListener(handler);
+        btn_exc_cli.addActionListener(handler);
+        btn_exc_cont.addActionListener(handler);
+        btn_pesq_cli.addActionListener(handler);
+        btn_pesq_cont.addActionListener(handler);
+        btn_sair.addActionListener(handler);
+        btn_saldo.addActionListener(handler);
+        btn_salvar_estado.addActionListener(handler);
+        btn_saque.addActionListener(handler);
+        
         
     }
     
     private class ButtonHandler implements ActionListener {
    	  public void actionPerformed(ActionEvent event){
+   		  
   		 if (event.getSource()== btn_cad_agencia) {
-  			 Sistema.frm_menu.setVisible(false);
+  			 estadoJanela.JanelaVisibleFalse();
   			 Sistema.frm_cadastro_agencia.setVisible(true);
-  			 Sistema.frm_cadastro_cliente.setVisible(false);
 		}else if (event.getSource() == btn_cad_cliente) {
-			 Sistema.frm_menu.setVisible(false);
-			 Sistema.frm_cadastro_agencia.setVisible(false);
+			estadoJanela.JanelaVisibleFalse();
 			 Sistema.frm_cadastro_cliente.setVisible(true);
+		}else if (event.getSource() == btn_cad_conta) {
+			estadoJanela.JanelaVisibleFalse();
+			 Sistema.frm_cadastro_conta.setVisible(true);
+		}else if (event.getSource() == btn_deposito) {
+			estadoJanela.JanelaVisibleFalse();
+			 Sistema.frm_deposito.setVisible(true);
+		}else if (event.getSource() == btn_extrato) {
+			estadoJanela.JanelaVisibleFalse();
+			 Sistema.frm_extrato.setVisible(true);
+		}else if (event.getSource() == btn_exc_cli){
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_excluir_cliente.setVisible(true);
+		}else if (event.getSource() == btn_exc_cont){
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_excluir_conta.setVisible(true);
+		}else if (event.getSource() == btn_pesq_cli) {
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_pesquisa_cliente.setVisible(true);
+		}else if (event.getSource() == btn_pesq_cont) {
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_pesquisa_conta.setVisible(true);
+		}else if (event.getSource() == btn_alt_senha){
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_alt_senha.setVisible(true);
+		}else if (event.getSource() == btn_saldo){
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_saldo.setVisible(true);
+		}else if (event.getSource() == btn_saque){
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_saque.setVisible(true);
+		}else if (event.getSource() == btn_salvar_estado){
+			estadoJanela.JanelaVisibleFalse();
+			Sistema.frm_salvar_estado.setVisible(true);
+		}else if (event.getSource() == btn_sair) {
+			JOptionPane.showMessageDialog(null, "Sistema Funcionando");			
+			
 		}
   	  }
     }

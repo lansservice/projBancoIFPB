@@ -19,6 +19,10 @@ public class Cliente {
 	/** *Numero do endereço do cliente */
 	private String cliEndNum;
 	
+	private String cpf_cnpj;
+	
+	private String rg_ie;
+	
 	private String bairro;
 	
 	private String cidade;
@@ -173,6 +177,37 @@ public class Cliente {
 	public void setAgencia(String agencia) {
 		this.agencia = agencia;
 	}
+
+	/**
+	 * @return the cpf_cnpj
+	 */
+	public String getCpf_cnpj() {
+		return cpf_cnpj;
+	}
+
+	/**
+	 * @param cpf_cnpj the cpf_cnpj to set
+	 */
+	public void setCpf_cnpj(String cpf_cnpj) {
+		this.cpf_cnpj = cpf_cnpj;
+	}
+
+	/**
+	 * @return the rg_ie
+	 */
+	public String getRg_ie() {
+		return rg_ie;
+	}
+
+	/**
+	 * @param rg_ie the rg_ie to set
+	 */
+	public void setRg_ie(String rg_ie) {
+		this.rg_ie = rg_ie;
+	}
+	
+	
+	
 	
 
 }
