@@ -99,7 +99,6 @@ public class Deposito extends JPanel {
     	extra.setValorDeposito(valD);
     	extra.setValorSaque(valS);
     	extra.setValorIOF(valI);
-   	
 
     	    	
     	if (Sistema.banco.getMap_agencia().containsKey(txt_agencia.getText()) == true){

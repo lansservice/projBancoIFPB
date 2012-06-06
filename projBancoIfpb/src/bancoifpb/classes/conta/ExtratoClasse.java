@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 public class ExtratoClasse {
 	
+	private int doc = 0;
 	private String numAgencia;
 	private String numConta;
 	private BigDecimal valorDeposito;
@@ -96,6 +97,22 @@ public class ExtratoClasse {
 	public void setValorIOF(BigDecimal valorIOF) {
 		BigDecimal iof = new BigDecimal(-0.1);
 		this.valorIOF = valorIOF.multiply(iof);
+	}
+
+
+	/**
+	 * @return the doc
+	 */
+	public int getDoc() {
+		return doc;
+	}
+
+
+	/**
+	 * @param doc the doc to set
+	 */
+	public void setDoc(int doc) {
+		this.doc = doc;
 	}
 
 

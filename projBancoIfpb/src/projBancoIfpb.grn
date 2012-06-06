@@ -4,57 +4,57 @@
       <name="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
       <height="-1"/>
       <width="-1"/>
-      <x="291"/>
-      <y="-7"/>
+      <x="426"/>
+      <y="22"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
       <height="-1"/>
       <width="-1"/>
-      <x="-13"/>
-      <y="50"/>
+      <x="48"/>
+      <y="24"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.cliente{Cliente.java[Cliente"/>
       <height="-1"/>
       <width="-1"/>
-      <x="644"/>
+      <x="910"/>
       <y="18"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.conta{Conta.java[Conta"/>
       <height="-1"/>
       <width="-1"/>
-      <x="1"/>
-      <y="323"/>
+      <x="399"/>
+      <y="535"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes{Usuario.java[Usuario"/>
       <height="-1"/>
       <width="-1"/>
-      <x="-245"/>
-      <y="199"/>
+      <x="-236"/>
+      <y="33"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb{Sistema.java[Sistema"/>
       <height="-1"/>
       <width="-1"/>
-      <x="-236"/>
-      <y="47"/>
+      <x="13"/>
+      <y="283"/>
    </type>
    <type>
       <name="=projBancoIfpb/src<bancoifpb.classes.validadores{EstadoJanela.java[EstadoJanela"/>
       <height="-1"/>
       <width="-1"/>
-      <x="-267"/>
-      <y="361"/>
+      <x="-263"/>
+      <y="286"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=projBancoIfpb/src<bancoifpb.classes{Banco.java[Banco"/>
-      <targetType="=projBancoIfpb/src<bancoifpb.classes{Agencia.java[Agencia"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
+   <type>
+      <name="=projBancoIfpb/src<bancoifpb.classes.conta{ExtratoClasse.java[ExtratoClasse"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="-262"/>
+      <y="353"/>
+   </type>
 </uml>
 

@@ -7,8 +7,8 @@ import java.util.HashMap;
 
 import javax.swing.JOptionPane;
 
-import bancoifpb.classes.cliente.*;
-import bancoifpb.classes.conta.*;
+import bancoifpb.classes.cliente.Cliente;
+import bancoifpb.classes.conta.Conta;
 
 /**
  * @author Leonardo Costa Vieira

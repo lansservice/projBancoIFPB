@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 import javax.swing.*;
 
 import bancoifpb.Sistema;
@@ -92,6 +93,7 @@ public class Extrato extends JPanel {
     			agen = Sistema.banco.getMap_agencia().get(txt_agencia.getText());
     			conta = agen.getContaAgencia(txt_conta.getText());
     			
+   			
     			dados_conta = "Extrato: " + "/n"+
     							conta.getMap_extrato().toString() + "/n "+
     							conta.getValorSaldo();
